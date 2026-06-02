@@ -10,9 +10,7 @@ let j = 0;
 let currentWord = "";
 let isDeleting = false;
 
-// =======================
-// TYPING EFFECT
-// =======================
+
 
 function type() {
 
@@ -57,9 +55,9 @@ function type() {
 type();
 
 
-// =======================
-// TABLE SHOW / HIDE
-// =======================
+
+// TABLE ko  SHOW or HIDE karwana
+
 
 function toggleTable() {
 
@@ -84,9 +82,7 @@ function toggleTable() {
 }
 
 
-// =======================
-// RANGE FILTER
-// =======================
+
 
 function handleRangeChange() {
 
@@ -96,7 +92,7 @@ function handleRangeChange() {
     const customBox =
         document.getElementById("customDateBox");
 
-    // CUSTOM RANGE
+  
 
     if (range === "custom") {
 
@@ -105,11 +101,10 @@ function handleRangeChange() {
         return;
     }
 
-    // HIDE CUSTOM DATE
+   
 
     customBox.style.display = "none";
 
-    // AUTO SUBMIT
 
     document
         .getElementById("filterForm")
@@ -118,9 +113,7 @@ function handleRangeChange() {
 
 
 
-// =======================
-// CUSTOM DATE SUBMIT
-// =======================
+
 
 function autoSubmitForm() {
 
@@ -134,7 +127,7 @@ function autoSubmitForm() {
             'input[name="endDate"]'
         ).value;
 
-    // BOTH DATE SELECTED
+   
 
     if (start !== "" && end !== "") {
 

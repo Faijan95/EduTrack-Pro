@@ -16,31 +16,29 @@ namespace StudentManagementSystem.Controllers
             _context = context;
         }
 
-        // =========================
-        // LANDING PAGE
-        // =========================
+     
 
         public IActionResult Index()
         {
             return View();
         }
 
-        // =========================
+        
         // CONTACT FORM SUBMIT
-        // =========================
+        
 
         [HttpPost]
         public async Task<IActionResult> Contact(Contact contact)
         {
-            // Default Status
+            
 
             contact.Status = "Pending";
 
-            // Save Current Date
+            
 
             contact.CreatedDate = DateTime.Now;
 
-            // Save Data
+            // ye data save karta hai
 
             _context.Contacts.Add(contact);
 
@@ -52,9 +50,7 @@ namespace StudentManagementSystem.Controllers
             return RedirectToAction("Index", "Student");
         }
 
-        // =========================
-        // CONTACT LIST
-        // =========================
+      
 
         public IActionResult ContactList()
         {
@@ -63,9 +59,7 @@ namespace StudentManagementSystem.Controllers
 
             return View(contacts);
         }
-        // =========================
-        // DASHBOARD
-        // =========================
+     
 
         public IActionResult Dashboard(
     string search,
@@ -75,9 +69,7 @@ namespace StudentManagementSystem.Controllers
     string rangeType,
     string status)
         {
-            // =========================
-            // SESSION CHECK
-            // =========================
+            
 
             var adminSession =
                 HttpContext.Session.GetString("Admin");
@@ -87,9 +79,7 @@ namespace StudentManagementSystem.Controllers
                 return RedirectToAction("Login", "Admin");
             }
 
-            // =========================
-            // VIEWBAG
-            // =========================
+           
 
             ViewBag.Search = search;
             ViewBag.RangeType = rangeType;
@@ -97,16 +87,12 @@ namespace StudentManagementSystem.Controllers
             ViewBag.StartDate = startDate;
             ViewBag.EndDate = endDate;
 
-            // =========================
-            // QUERY
-            // =========================
+          
 
             var contacts =
                 _context.Contacts.AsQueryable();
 
-            // =========================
-            // STATUS FILTER
-            // =========================
+           
 
             if (!string.IsNullOrEmpty(status))
             {
@@ -123,9 +109,7 @@ namespace StudentManagementSystem.Controllers
                 }
             }
 
-            // =========================
-            // SEARCH FILTER
-            // =========================
+          
 
             if (!string.IsNullOrEmpty(search))
             {
@@ -134,9 +118,7 @@ namespace StudentManagementSystem.Controllers
                     x.Email.Contains(search));
             }
 
-            // =========================
-            // DATE FILTER
-            // =========================
+         
 
             if (rangeType == "today")
             {
@@ -180,27 +162,24 @@ namespace StudentManagementSystem.Controllers
                 }
             }
 
-            // =========================
-            // COUNTS
-            // =========================
 
-            // TOTAL FILTERED
+
             ViewBag.TotalContacts =
                 contacts.Count();
 
-            // PENDING FILTERED
+            
             ViewBag.PendingContacts =
                 contacts.Count(x =>
                     x.Status == "Pending");
 
-            // APPROVED FILTERED
+          
             ViewBag.ApprovedContacts =
                 contacts.Count(x =>
                     x.Status == "Approved");
 
-            // =========================
+           
             // PAGINATION
-            // =========================
+            
 
             int pageSize = 10;
 
@@ -210,17 +189,13 @@ namespace StudentManagementSystem.Controllers
                 .OrderByDescending(x => x.Id)
                 .ToPagedList(pageNumber, pageSize);
 
-            // =========================
-            // RETURN
-            // =========================
+
 
             return View(result);
         }
 
 
-        // =========================
-        // APPROVE CONTACT
-        // =========================
+       
 
         public IActionResult Approve(int id)
         {
@@ -237,9 +212,7 @@ namespace StudentManagementSystem.Controllers
             return RedirectToAction("Dashboard");
         }
 
-        // =========================
-        // DELETE CONTACT
-        // =========================
+       
 
         public IActionResult DeleteContact(int id)
         {
@@ -256,9 +229,7 @@ namespace StudentManagementSystem.Controllers
             return RedirectToAction("Dashboard");
         }
 
-        // =========================
-        // EDIT PAGE OPEN
-        // =========================
+       
 
         public IActionResult EditContact(int id)
         {
@@ -276,9 +247,7 @@ namespace StudentManagementSystem.Controllers
             return View(contact);
         }
 
-        // =========================
-        // UPDATE CONTACT
-        // =========================
+    
 
         [HttpPost]
         public IActionResult EditContact(Contact contact)

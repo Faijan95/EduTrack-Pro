@@ -141,3 +141,4 @@ C:\Users\dell\source\repos\StudentManagementSystem\StudentManagementSystem\obj\D
 C:\Users\dell\source\repos\StudentManagementSystem\StudentManagementSystem\obj\Debug\net8.0\StudentManagementSystem.pdb
 C:\Users\dell\source\repos\StudentManagementSystem\StudentManagementSystem\obj\Debug\net8.0\StudentManagementSystem.genruntimeconfig.cache
 C:\Users\dell\source\repos\StudentManagementSystem\StudentManagementSystem\obj\Debug\net8.0\ref\StudentManagementSystem.dll
+C:\Users\dell\source\repos\StudentManagementSystem\StudentManagementSystem\obj\Debug\net8.0\StudentManagementSystem.sourcelink.json

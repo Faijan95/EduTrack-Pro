@@ -1,6 +1,4 @@
-﻿/* =========================
-        GLOBAL STYLE
-========================= */
+﻿
 
 * {
     margin: 0;
@@ -20,7 +18,7 @@ body {
     position: relative;
 }
 
-    /* GLOW EFFECT */
+    
 
     body::before {
         content: "";
@@ -48,9 +46,7 @@ body {
 
 
 
-/* =========================
-        NAVBAR
-========================= */
+
 
 .navbar {
     background: rgba(255,255,255,0.08) !important;
@@ -60,7 +56,6 @@ body {
     border-radius: 22px;
     padding: 20px 40px;
 /*    margin-top: 5px;*/
-/*    box-shadow: 0 10px 40px rgba(0,0,0,0.35);*/
     margin-left: -30px;
 }
 
@@ -84,9 +79,7 @@ body {
 
 
 
-/* =========================
-        HERO SECTION
-========================= */
+
 
 .hero-section {
     min-height: 100vh;
@@ -159,9 +152,7 @@ body {
 
 
 
-/* =========================
-        SERVICES
-========================= */
+
 
 .services {
     padding: 120px 0;
@@ -187,12 +178,14 @@ body {
     border-radius: 35px;
     padding: 50px 35px;
     text-align: center;
-    height: 540px;
+    height: 640px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     transition: 0.4s;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
 
@@ -237,9 +230,7 @@ body {
 
 
 
-/* =========================
-        ABOUT SECTION
-========================= */
+
 
 .about-section {
     padding: 120px 0;
@@ -265,9 +256,6 @@ body {
 
 
 
-/* =========================
-        CONTACT SECTION
-========================= */
 
 .contact-section {
     padding: 120px 0;
@@ -346,9 +334,7 @@ textarea.custom-input {
         box-shadow: 0 10px 30px rgba(37,99,235,0.45);
     }
 
-/* =========================
-   CONTACT FORM FIX
-========================= */
+
 
 .custom-input {
     background: rgba(255,255,255,0.08) !important;
@@ -360,13 +346,13 @@ textarea.custom-input {
     transition: 0.3s;
 }
 
-    /* PLACEHOLDER */
+   
 
     .custom-input::placeholder {
         color: rgba(255,255,255,0.55) !important;
     }
 
-    /* FOCUS EFFECT */
+   
 
     .custom-input:focus {
         background: rgba(255,255,255,0.12) !important;
@@ -376,7 +362,7 @@ textarea.custom-input {
         outline: none !important;
     }
 
-/* LABEL */
+
 
 .custom-label {
     color: #ffffff;
@@ -384,7 +370,7 @@ textarea.custom-input {
     margin-bottom: 10px;
 }
 
-/* CONTACT CARD */
+
 
 .contact-card {
     background: rgba(255,255,255,0.05);
@@ -394,9 +380,7 @@ textarea.custom-input {
     border: 1px solid rgba(255,255,255,0.08);
 }
 
-/* =========================
-        FOOTER
-========================= */
+
 
 .footer-section {
     padding: 100px 0 40px;
@@ -491,9 +475,7 @@ textarea.custom-input {
     color: rgba(255,255,255,0.5);
 }
 
-/* =========================================
-            FOOTER SAME BACKGROUND
-========================================= */
+
 
 .footer-section {
     background: transparent !important;
@@ -501,7 +483,7 @@ textarea.custom-input {
     overflow: hidden;
 }
 
-    /* FOOTER GLOW */
+    
 
     .footer-section::before {
         content: "";
@@ -529,14 +511,14 @@ textarea.custom-input {
         z-index: 0;
     }
 
-/* CONTENT ABOVE GLOW */
+
 
 .footer-container {
     position: relative;
     z-index: 2;
 }
 
-/* TOP BORDER */
+
 
 .footer-section {
     border-top: 1px solid rgba(255,255,255,0.08);
@@ -544,9 +526,7 @@ textarea.custom-input {
 
 
 
-/* =========================
-        RESPONSIVE
-========================= */
+
 
 @media(max-width:768px) {
 

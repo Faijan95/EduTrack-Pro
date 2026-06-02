@@ -21,7 +21,7 @@ namespace StudentManagementSystem.Controllers
         }
 
 
-        // EDIT GET
+
         public async Task<IActionResult> Edit(int id)
         {
             var student = await _context.Students.FindAsync(id);
@@ -35,7 +35,7 @@ namespace StudentManagementSystem.Controllers
         }
 
 
-        // EDIT POST
+    
         [HttpPost]
         public async Task<IActionResult> Edit(Student student)
         {
@@ -46,7 +46,7 @@ namespace StudentManagementSystem.Controllers
         }
 
 
-        // DELETE
+
         public async Task<IActionResult> Delete(int id)
         {
             var student = await _context.Students.FindAsync(id);
