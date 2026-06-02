@@ -1,6 +1,6 @@
-# Student Management System
+# EduTrack-Pro
 
-Student Management System built using ASP.NET Core MVC and SQL Server.
+EduTrack-Pro System built using ASP.NET Core MVC and SQL Server.
 
 ## Features
 - Admin Dashboard
