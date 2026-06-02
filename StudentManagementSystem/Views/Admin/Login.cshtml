@@ -1,0 +1,208 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+
+    <title>Admin Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                background: linear-gradient(135deg, #4facfe, #00f2fe);
+                position: relative;
+            }
+
+            .circle {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba(255,255,255,0.15);
+            }
+
+            .circle1 {
+                width: 300px;
+                height: 300px;
+                top: -100px;
+                left: -100px;
+            }
+
+            .circle2 {
+                width: 350px;
+                height: 350px;
+                bottom: -120px;
+                right: -120px;
+            }
+
+            .login-card {
+                width: 420px;
+                padding: 45px;
+                border-radius: 25px;
+                background: rgba(255,255,255,0.15);
+                backdrop-filter: blur(15px);
+                border: 1px solid rgba(255,255,255,0.2);
+                box-shadow: 0px 10px 40px rgba(0,0,0,0.25);
+                color: white;
+                position: relative;
+                z-index: 10;
+            }
+
+            .admin-icon {
+                width: 90px;
+                height: 90px;
+                background: rgba(255,255,255,0.2);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                margin-bottom: 20px;
+                font-size: 40px;
+            }
+
+            .login-title {
+                text-align: center;
+                font-size: 35px;
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+
+            .login-subtitle {
+                text-align: center;
+                color: #f1f1f1;
+                margin-bottom: 35px;
+                font-size: 14px;
+            }
+
+            .form-label {
+                margin-bottom: 8px;
+                font-weight: 500;
+                color: white;
+            }
+
+            .form-control {
+                height: 50px;
+                border-radius: 12px;
+                border: none;
+                background: rgba(255,255,255,0.2);
+                color: white;
+                padding-left: 15px;
+            }
+
+                .form-control::placeholder {
+                    color: #eeeeee;
+                }
+
+                .form-control:focus {
+                    background: rgba(255,255,255,0.25);
+                    color: white;
+                    border: 1px solid white;
+                    box-shadow: none;
+                }
+
+            .login-btn {
+                height: 50px;
+                border-radius: 12px;
+                background: white;
+                color: #0072ff;
+                font-size: 17px;
+                font-weight: 600;
+                border: none;
+                transition: 0.3s;
+            }
+
+                .login-btn:hover {
+                    transform: scale(1.03);
+                    background: #f1f1f1;
+                }
+
+            .error-text {
+                margin-top: 18px;
+                text-align: center;
+                color: #ffd6d6;
+            }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="circle circle1"></div>
+
+    <div class="circle circle2"></div>
+
+    <div class="login-card">
+
+       
+
+        <h1 class="login-title">
+            Admin Panel
+        </h1>
+
+        <p class="login-subtitle">
+            Secure login to manage website dashboard
+        </p>
+
+        <form method="post">
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Email Address
+                </label>
+
+                <input type="email"
+                       name="email"
+                       class="form-control"
+                       placeholder="Enter your email">
+
+            </div>
+
+            <div class="mb-4">
+
+                <label class="form-label">
+                    Password
+                </label>
+
+                <input type="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="Enter your password">
+
+            </div>
+
+            <button class="btn login-btn w-100">
+                Login Now
+            </button>
+
+        </form>
+
+        <div class="error-text">
+            @ViewBag.Message
+        </div>
+
+    </div>
+
+</body>
+</html>

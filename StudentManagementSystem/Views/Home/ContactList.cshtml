@@ -1,0 +1,79 @@
+﻿@model IEnumerable<StudentManagementSystem.Models.Contact>
+
+<h2 class="mb-4">Contact Messages</h2>
+
+<table class="table table-bordered table-striped">
+
+    <thead class="table-dark">
+
+        <tr>
+
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+            <th>Status</th>
+            <th>Action</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.Id</td>
+
+                <td>@item.FullName</td>
+
+                <td>@item.Email</td>
+
+                <td>@item.Phone</td>
+
+                <td>@item.Message</td>
+
+                <td>
+
+                    @if (item.Status == "Approved")
+                    {
+                        <span class="badge bg-success">
+                            Approved
+                        </span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-warning text-dark">
+                            Pending
+                        </span>
+                    }
+
+                </td>
+
+                <td>
+
+                    <a href="/Home/Approve/@item.Id"
+                       class="btn btn-success btn-sm">
+
+                        Approve
+
+                    </a>
+
+                    <a href="/Home/DeleteContact/@item.Id"
+                       class="btn btn-danger btn-sm">
+
+                        Delete
+
+                    </a>
+
+                </td>
+
+            </tr>
+        }
+
+    </tbody>
+
+</table>
