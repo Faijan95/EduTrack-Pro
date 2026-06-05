@@ -16,16 +16,16 @@ namespace StudentManagementSystem.Controllers
             _context = context;
         }
 
-     
+
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Student");
         }
 
-        
+
         // CONTACT FORM SUBMIT
-        
+
 
         [HttpPost]
         public async Task<IActionResult> Contact(Contact contact)
